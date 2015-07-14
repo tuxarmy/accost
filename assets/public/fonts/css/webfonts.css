@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local('Roboto'),
+		local('Roboto-Regular'),
+		/* from  */
+		url('../fonts/Roboto.eot?#iefix') format('embedded-opentype'),
+		/* from http://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff */
+		url('../fonts/Roboto.woff') format('woff'),
+		/* from http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf */
+		url('../fonts/Roboto.ttf') format('truetype'),
+		/* from http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac#Roboto */
+		url('../fonts/Roboto.svg#Roboto') format('svg');
+}
+@font-face {
+	font-family: 'Grand Hotel';
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local('Grand Hotel'),
+		local('GrandHotel-Regular'),
+		/* from  */
+		url('../fonts/Grand_Hotel.eot?#iefix') format('embedded-opentype'),
+		/* from http://fonts.gstatic.com/s/grandhotel/v4/NrGQkrs9rbHm5EYx0Eil0obN6UDyHWBl620a-IRfuBk.woff */
+		url('../fonts/Grand_Hotel.woff') format('woff'),
+		/* from http://fonts.gstatic.com/s/grandhotel/v4/NrGQkrs9rbHm5EYx0Eil0p0EAVxt0G0biEntp43Qt6E.ttf */
+		url('../fonts/Grand_Hotel.ttf') format('truetype'),
+		/* from http://fonts.gstatic.com/l/font?kit=NrGQkrs9rbHm5EYx0Eil0nNsigHlcrQGNV8nkUSFQfc&skey=3d5373e9fc70eefe#GrandHotel */
+		url('../fonts/Grand_Hotel.svg#GrandHotel') format('svg');
+}

@@ -32,5 +32,9 @@ class Admin_Controller extends MY_Controller {
 class Public_Controller extends MY_Controller {
 	function __construct(){
 		parent::__construct();
+		$this->data['page_title'] = 'Accost - Dashboard';
+	}
+	protected function render($view = NULL, $template = 'public_master'){
+		parent::render($view, $template);
 	}
 }
