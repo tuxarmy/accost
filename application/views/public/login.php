@@ -7,36 +7,33 @@
 			</div>
 			<div style="padding-top:30px" class="panel-body" >
 				<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-				
-				<form id="loginform" class="form-horizontal" role="form">
-					
+				<?php echo form_open('', array('class'=>'form-horizontal', 'role'=>'form')) ?>
 					<div style="margin-bottom: 25px" class="input-group">
+						<?php echo form_error('identity'); ?>
 						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						<input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+						<?php echo form_input(array('name'=>'identity', 'class'=>'form-control', 'placeholder'=>'username')); ?>
 					</div>
-					
 					<div style="margin-bottom: 25px" class="input-group">
+						<?php echo form_error('password'); ?>
 						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-						<input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+						<?php echo form_password(array('name'=>'password', 'class'=>'form-control', 'placeholder'=>'password')); ?>
 					</div>
-					
-					
 					<div class="input-group">
 						<div class="checkbox">
 							<label>
-								<input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+								<?php echo form_checkbox('remember','1',FALSE);?> Remember me
 							</label>
 						</div>
 					</div>
 					<div style="margin-top:10px" class="form-group">
 						<!-- Button -->
 						<div class="col-sm-12 controls">
-							<a id="btn-login" href="#" class="btn btn-success">Login  </a>
+							<?php echo form_submit('submit', 'Log in', 'class="btn btn-success"');?>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12 control">
-							<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+							<div style="padding-top:15px; font-size:85%" >
 								Don't have an account!
 								<a href="register">
 									Register Here
@@ -44,7 +41,7 @@
 							</div>
 						</div>
 					</div>
-				</form>
+				<?php echo form_close(); ?>
 			</div>
 		</div>
 	</div>

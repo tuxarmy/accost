@@ -5,6 +5,8 @@ class MY_Controller extends CI_Controller {
 	protected $data = array();
 	function __construct(){
 		parent::__construct();
+		
+		$this->load->library('ion_auth');
 		$this->data['page_title'] = 'Accost';
 	}
 
@@ -22,6 +24,11 @@ class MY_Controller extends CI_Controller {
 class Admin_Controller extends MY_Controller {
 	function __construct(){
 		parent::__construct();
+		
+		if (!$this->ion_auth->logged_in()){
+			redirect('login', 'refresh');
+		}
+
 		$this->data['page_title'] = 'Accost - Dashboard';
 	}
 	protected function render($view = NULL, $template = 'admin_master'){
