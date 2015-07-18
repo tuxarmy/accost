@@ -8,13 +8,13 @@
 			<div style="padding-top:30px" class="panel-body" >
 				<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 				<?php echo form_open('', array('class'=>'form-horizontal', 'role'=>'form')) ?>
+					<?php echo form_error('identity', '<small class="text-danger">','</small>'); ?>
 					<div style="margin-bottom: 25px" class="input-group">
-						<?php echo form_error('identity'); ?>
 						<span class="input-group-addon"><i class="fa fa-user"></i></span>
 						<?php echo form_input(array('name'=>'identity', 'class'=>'form-control', 'placeholder'=>'username')); ?>
 					</div>
+					<?php echo form_error('password', '<small class="text-danger">', '</small>'); ?>
 					<div style="margin-bottom: 25px" class="input-group">
-						<?php echo form_error('password'); ?>
 						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 						<?php echo form_password(array('name'=>'password', 'class'=>'form-control', 'placeholder'=>'password')); ?>
 					</div>

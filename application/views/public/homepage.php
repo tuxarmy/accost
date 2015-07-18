@@ -131,17 +131,25 @@ $this->load->view('templates/_parts/public_master_slider');
 		<div class="blog_list2">
 			<div class="login_box">
 				<h3 class="title">Member Login</h3>
-				<form>
+				<?php echo form_open('login') ?>
 					<div class="form-group">
-						<label for="username">Username</label>
-						<input type="text" class="form-control" id="username" placeholder="Username">
+						<label for="Username">Username</label>
+						<?php echo form_input(array('name'=>'identity', 'class'=>'form-control', 'placeholder'=>'username', 'id'=>'Username')); ?>
 					</div>
 					<div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" class="form-control" id="password" placeholder="Password">
+						<label for="Password">Password</label>
+						<?php echo form_password(array('name'=>'password', 'class'=>'form-control', 'placeholder'=>'Password', 'id'=>'Password')); ?>
 					</div>
-					<input type="submit" value="Sign in"> <a href="<?php echo base_url('register'); ?>">Create Account?</a>
-				</form>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<?php echo form_checkbox('remember','1',FALSE);?> Remember me
+							</label>
+						</div>
+					</div>
+					<?php echo form_submit('submit', 'Log in');?>
+					<a href="<?php echo base_url('register'); ?>" class="pull-right">Create Account?</a>
+				<?php echo form_close(); ?>
 			</div>
 			<h3>Our Agents</h3>
 			<ul class="blog-list3 list_1">

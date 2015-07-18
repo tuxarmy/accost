@@ -3,7 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pages extends Public_Controller {
 	public function index(){
+		$this->load->helper('form');
 		$this->render('public/homepage');
+	}
+
+	public function register(){
+		$this->load->helper('form');
+		$this->render('public/register');
 	}
 
 	public function login(){
@@ -32,8 +38,8 @@ class Pages extends Public_Controller {
 		$this->render('public/login');
 	}
 
-	public function register(){
-		$this->load->helper('form');
-		$this->render('public/register');
+	public function logout(){
+		$this->ion_auth->logout();
+		redirect('login', 'refresh');
 	}
 }
