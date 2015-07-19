@@ -14,7 +14,7 @@
 					foreach($users as $user){
 						echo '<tr>';
 						echo '<td>'.$user->id.'</td><td>'.$user->username.'</td><td>'.$user->first_name.' '.$user->last_name.'</td></td><td>'.$user->email.'</td><td>'.date('Y-m-d H:i:s', $user->last_login).'</td><td>';
-						if($current_user->id != $user->id) echo anchor('admin/users/edit/'.$user->id,'<span class="glyphicon glyphicon-pencil"></span>').' '.anchor('admin/users/delete/'.$user->id,'<span class="glyphicon glyphicon-remove"></span>');
+						if($current_user->id != $user->id) echo anchor('admin/users/edit/'.$user->id,'<span class="fa fa-pencil"></span>').' '.anchor('admin/users/delete/'.$user->id,'<span class="fa fa-remove"></span>');
 						else echo '&nbsp;';
 						echo '</td>';
 						echo '</tr>';
