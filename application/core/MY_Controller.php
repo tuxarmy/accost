@@ -28,9 +28,10 @@ class Admin_Controller extends MY_Controller {
 		if (!$this->ion_auth->logged_in()){
 			redirect('login', 'refresh');
 		}
-
+		$this->data['current_user'] = $this->ion_auth->user()->row();
 		$this->data['page_title'] = 'Accost - Dashboard';
 	}
+
 	protected function render($view = NULL, $template = 'admin_master'){
 		parent::render($view, $template);
 	}
