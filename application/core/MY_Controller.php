@@ -29,10 +29,14 @@ class Admin_Controller extends MY_Controller {
 			redirect('login', 'refresh');
 		}
 		$this->data['current_user'] = $this->ion_auth->user()->row();
+		$this->data['current_user_menu'] = '';
+		if($this->ion_auth->in_group('admin')){
+			$this->data['current_user_menu'] = $this->load->view('templates/_parts/user_menu_admin.php', NULL, TRUE);
+		}
 		$this->data['page_title'] = 'Accost - Dashboard';
 	}
 
-	protected function render($view = NULL, $template = 'admin_master'){
+	protected function render($view = NULL, $template = 'dashboard_master'){
 		parent::render($view, $template);
 	}
 }

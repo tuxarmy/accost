@@ -4,11 +4,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?php echo $page_title; ?></title>
-		<link rel="stylesheet" href="<?php echo base_url('assets/admin/css/bootstrap.min.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/admin/css/metisMenu.min.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/admin/css/timeline.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/admin/css/sb-admin-2.css'); ?>">
-		<link rel="stylesheet" href="<?php echo base_url('assets/admin/css/morris.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/dashboard/css/bootstrap.min.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/dashboard/css/metisMenu.min.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/dashboard/css/timeline.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/dashboard/css/sb-admin-2.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/dashboard/css/morris.css'); ?>">
 		<link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css'); ?>">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,15 +27,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">
-						<?php echo $this->config->item('acc_title'); ?> <small><i>admin</i></small>
+					<a class="navbar-brand" href="<?php echo site_url('dashboard'); ?>">
+						<?php echo $this->config->item('acc_title'); ?>
 					</a>
 				</div>
 				<!-- /.navbar-header -->
 				
 				<ul class="nav navbar-top-links navbar-right">
-					<li><a href="<?php echo site_url('admin/groups'); ?>">Groups</a></li>
-					<li><a href="<?php echo site_url('admin/users'); ?>">Users</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -54,7 +52,7 @@
 		<!-- /.dropdown -->
 	</ul>
 	<!-- /.navbar-top-links -->
-	<?php $this->load->view('templates/_parts/admin_master_sidebar'); ?>
+	<?php $this->load->view('templates/_parts/dashboard_master_sidebar'); ?>
 </nav>
 </div>
 <!-- /.wrapper -->
